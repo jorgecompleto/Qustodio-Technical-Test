@@ -26,6 +26,7 @@ from AUX_2
 GROUP BY cohort_month, sub_plan
 ORDER by cohort_month, sub_plan
 
+;
 -- Query to extract users and user purchases per cohort and subscription plan (Retention per Cohort and Retention Rate per Subscription sheets)
 
 WITH cohort_aux as(
@@ -58,6 +59,7 @@ select cohort_month,
 from retention_aux
 order by cohort_month, sub_plan
 
+;
 
 -- Query to extract 1 month retention per cohort and subscription plan
 
@@ -93,7 +95,7 @@ from retention_aux
 group by cohort_month, sub_plan
 order by cohort_month, sub_plan
 
-
+;
 -- Query to extract 1 month Retention Rate per Subscription Plan
 
 WITH cohort_aux as(
@@ -127,3 +129,5 @@ select
 from retention_aux
 group by sub_plan
 order by sub_plan
+
+;
